@@ -1,0 +1,21 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.fm-inline {
+    display: inline;
+}
+
+.badge-lg {
+    font-size: 1.0rem;
+}
+
+.avatar {
+    height: 128px;
+    width: 128px;
+}
