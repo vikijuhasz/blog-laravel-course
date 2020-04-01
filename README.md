@@ -43,6 +43,10 @@ Code of 'Master Laravel PHP for Beginners and Intermediate' Udemy course created
     MAIL_PASSWORD=password provided by mailtrap   
     MAIL_FROM_ADDRESS=any random email address  
 ```
+- Add to the .env file:
+```
+    QUEUE_CONNECTION=redis    
+```
 
 ### Notes: 
 
