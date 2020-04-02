@@ -55,18 +55,18 @@ class BlogPost extends Model
         static::addGlobalScope(new DeletedAdminScope);        
         parent::boot();
                 
-        // this closure will be always called before a blogpost is deleted
-        static::deleting(function (BlogPost $blogPost) {
-            $blogPost->comments()->delete();            // will delete all the related comments 
-            Cache::tags(['blog_post'])->forget("blog-post-{$blogPost->id}");
-        });
-        
-        static::restoring(function (BlogPost $blogPost) {
-           $blogPost->comments()->restore(); 
-        });
-        
-        static::updating(function(BlogPost $blogPost) {
-            Cache::tags(['blog_post'])->forget("blog-post-{$blogPost->id}");
-        });
+//        // this closure will be always called before a blogpost is deleted
+//        static::deleting(function (BlogPost $blogPost) {
+//            $blogPost->comments()->delete();            // will delete all the related comments 
+//            Cache::tags(['blog_post'])->forget("blog-post-{$blogPost->id}");
+//        });
+//        
+//        static::restoring(function (BlogPost $blogPost) {
+//           $blogPost->comments()->restore(); 
+//        });
+//        
+//        static::updating(function(BlogPost $blogPost) {
+//            Cache::tags(['blog_post'])->forget("blog-post-{$blogPost->id}");
+//        });
     }    
 }
