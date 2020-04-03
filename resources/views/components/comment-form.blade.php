@@ -1,16 +1,18 @@
-<div class="mt-2 mb-2">
+<div class="mb-2 mt-2">
     @auth
         <form method="POST" action="{{ $route }}">
             @csrf
+    
             <div class="form-group">
-                <textarea type="text" id="content" name="content" class="form-control"></textarea>
+                <textarea type="text" name="content" class="form-control"></textarea>
             </div>
-            <button class="btn btn-primary btn-block">Add comment</button>
+    
+            <button type="submit" class="btn btn-primary btn-block">{{ __('Add comment') }}</button>
         </form>
         @errors @enderrors
     @else
-        <a href="{{ route('login') }}">Sign in</a> to post commemts!
+        <a href="{{ route('login') }}">{{ __('Sign-in') }}</a> {{ __('to post comments!') }}
     @endauth
-</div>
-<hr>
+    </div>
+    <hr/>
 
