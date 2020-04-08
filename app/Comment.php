@@ -10,7 +10,9 @@ use App\Traits\Taggable;
 class Comment extends Model
 {
     use SoftDeletes, Taggable;
-    
+
+    protected $hidden = ['deleted_at', 'commentable_type', 'commentable_id', 'user_id'];
+
     protected $fillable = ['user_id', 'content'];
 
    public function commentable()
@@ -21,7 +23,7 @@ class Comment extends Model
     public function user()
     {
         return $this->belongsTo('App\User');
-    }    
+    }
         
     public function scopeLatest(Builder $query)
     {
