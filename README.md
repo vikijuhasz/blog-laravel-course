@@ -45,7 +45,8 @@ Code of 'Master Laravel PHP for Beginners and Intermediate' Udemy course created
 ```
 - Add to the .env file:
 ```
-    QUEUE_CONNECTION=redis    
+    QUEUE_CONNECTION=redis  
+    COUNTER_TIMEOUT = 5  
 ```
 
 ### Notes: 
