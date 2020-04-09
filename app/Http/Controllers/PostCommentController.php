@@ -7,6 +7,7 @@ use App\BlogPost;
 use App\Events\CommentPosted;
 use App\Mail\CommentPostedMarkdown;
 use App\Jobs\NotifyUsersPostWasCommented;
+use App\Http\Resources\Comment as CommentResource;
 
 use App\Jobs\ThrottledMail;
 
@@ -20,7 +21,10 @@ class PostCommentController extends Controller
     public function index(BlogPost $post)
     {
         // return $post->comments;
-        return $post->comments()->with('user')->get();
+        // return new CommentResource($post->comments->first());
+        // return CommentResource::collection($post->comments);
+        return CommentResource::collection($post->comments()->with('user')->get());
+        // return $post->comments()->with('user')->get();
     }
     
     public function store(BlogPost $post, StoreComment $request)
