@@ -19,6 +19,6 @@ class HomeTest extends TestCase
         $response = $this->get('/contact');        
         
         $response->assertSeeText('Contact');     
-        $response->assertSeeText('This is the contact page.');       
+        $response->assertSeeText('Hello this is contact!');      
     }
 }

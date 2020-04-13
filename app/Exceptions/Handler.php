@@ -61,7 +61,6 @@ class Handler extends ExceptionHandler
             return response()->json(['message' => $exception->getMessage()], 403);
         }
         
-        dd(get_class($exception));
         return parent::render($request, $exception);
     }
 }

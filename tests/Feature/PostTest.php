@@ -14,7 +14,7 @@ class PostTest extends TestCase
     public function testNoBlogPostsWhenNothingInDatabase()
     {
        $response = $this->get('/posts');
-       $response->assertSeeText('No blog posts yet.');
+       $response->assertSeeText('No blog posts yet');
     }
     
     public function testSee1BlogPostWhenThereIs1WithNoComments()
