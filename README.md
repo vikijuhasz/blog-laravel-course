@@ -39,7 +39,8 @@ Code of 'Master Laravel PHP for Beginners and Intermediate' Udemy course created
 - Register to mailtrap at https://mailtrap.io
 - Add to the .env file:  
 ```
-    MAIL_USERNAME=username provided by mailtrap   
+    MAIL_DRIVER=smtp
+	MAIL_USERNAME=username provided by mailtrap   
     MAIL_PASSWORD=password provided by mailtrap   
     MAIL_FROM_ADDRESS=any random email address  
 ```
